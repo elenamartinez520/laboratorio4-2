@@ -1,0 +1,27 @@
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Ingrese edad: ");
+
+                int edad = Convert.ToInt32(Console.ReadLine());
+
+                if(edad<1 || edad>120)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+
+                Console.WriteLine("Edad válida");
+            }
+
+            catch(ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Edad fuera de rango");
+            }
+        }
+    }
+}
