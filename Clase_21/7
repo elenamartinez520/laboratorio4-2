@@ -1,0 +1,25 @@
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese frase: ");
+
+            string frase = Console.ReadLine();
+
+            Console.Write("Ingrese palabra: ");
+
+            string palabra = Console.ReadLine();
+
+            if(frase.Contains(palabra))
+            {
+                Console.WriteLine("La palabra existe");
+            }
+            else
+            {
+                Console.WriteLine("La palabra no existe");
+            }
+        }
+    }
+}
