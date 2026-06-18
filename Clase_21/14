@@ -1,0 +1,64 @@
+namespace ConsoleApp14
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Ingrese frase: ");
+
+                string frase = Console.ReadLine();
+
+                Console.WriteLine("Caracteres: " + frase.Length);
+
+                string[] palabras = frase.Split(' ');
+
+                Console.WriteLine("Palabras: " + palabras.Length);
+
+                int vocales = 0;
+
+                foreach(char letra in frase)
+                {
+                    if(letra=='a'||letra=='e'||letra=='i'||letra=='o'||letra=='u'
+                    || letra=='A'||letra=='E'||letra=='I'||letra=='O'||letra=='U')
+                    {
+                        vocales++;
+                    }
+                }
+
+                Console.WriteLine("Vocales: " + vocales);
+
+                Console.Write("Ingrese posición: ");
+
+                int posicion = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Carácter: " + frase[posicion]);
+
+                Console.Write("Ingrese número: ");
+
+                int numero = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Resultado: " + (100/numero));
+            }
+
+            catch(FormatException)
+            {
+                Console.WriteLine("Formato incorrecto");
+            }
+
+            catch(IndexOutOfRangeException)
+            {
+                Console.WriteLine("Posición inválida");
+            }
+
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine("No dividir por cero");
+            }
+        }
+    }
+}
+
+
+
