@@ -1,0 +1,31 @@
+namespace ConsoleApp13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Número 1: ");
+
+                int n1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Número 2: ");
+
+                int n2 = Convert.ToInt32(Console.ReadLine());
+
+                checked
+                {
+                    int suma = n1 + n2;
+
+                    Console.WriteLine("Resultado: " + suma);
+                }
+            }
+
+            catch(OverflowException)
+            {
+                Console.WriteLine("Overflow detectado");
+            }
+        }
+    }
+} 
