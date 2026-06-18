@@ -1,0 +1,25 @@
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese frase: ");
+
+            string frase = Console.ReadLine();
+
+            int vocales = 0;
+
+            foreach(char letra in frase)
+            {
+                if(letra=='a'||letra=='e'||letra=='i'||letra=='o'||letra=='u'
+                || letra=='A'||letra=='E'||letra=='I'||letra=='O'||letra=='U')
+                {
+                    vocales++;
+                }
+            }
+
+            Console.WriteLine("Cantidad de vocales: " + vocales);
+        }
+    }
+}
