@@ -1,0 +1,20 @@
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                string texto = null;
+
+                Console.WriteLine(texto.Length);
+            }
+
+            catch(NullReferenceException)
+            {
+                Console.WriteLine("Variable nula");
+            }
+        }
+    }
+}
