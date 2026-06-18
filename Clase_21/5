@@ -1,0 +1,31 @@
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Número 1: ");
+
+                int n1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Número 2: ");
+
+                int n2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Resultado: " + (n1/n2));
+            }
+
+            catch(FormatException)
+            {
+                Console.WriteLine("Número inválido");
+            }
+
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine("No se puede dividir por cero");
+            }
+        }
+    }
+}
