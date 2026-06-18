@@ -1,0 +1,31 @@
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Ingrese números separados por comas: ");
+
+                string texto = Console.ReadLine();
+
+                string[] numeros = texto.Split(',');
+
+                int suma = 0;
+
+                for(int i=0; i<numeros.Length; i++)
+                {
+                    suma = suma + Convert.ToInt32(numeros[i]);
+                }
+
+                Console.WriteLine("Suma total: " + suma);
+            }
+
+            catch
+            {
+                Console.WriteLine("Error de conversión");
+            }
+        }
+    }
+}
