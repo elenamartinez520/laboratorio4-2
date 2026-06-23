@@ -1,0 +1,15 @@
+static void Ejercicio1()
+{
+    string[] peliculas = new string[5];
+
+    for (int i = 0; i < peliculas.Length; i++)
+    {
+        Console.Write("Pelicula: ");
+        peliculas[i] = Console.ReadLine();
+    }
+
+    foreach (string p in peliculas)
+    {
+        Console.WriteLine(p);
+    }
+}
